@@ -1,0 +1,121 @@
+All 28 clean-copy source/evidence bytes match candidate.
+PASS: exact rational certificates; tail<1/12, cross<1/40, Hankel<113/110
+PASS base replay.py (exit 0)
+PASS: independent rational trials; C_delta=16 beats the exact bare plasmon cost 4
+PASS base independent.py (exit 0)
+PASS: exact tail, completion, angular allocation, and relaxed sharpness
+PASS base SHARP-Q2/replay.py (exit 0)
+PASS: 980 exact finite edge matrices and independent ordered-pair assembly
+PASS base SHARP-Q2/independent.py (exit 0)
+CERTIFIED finite identities: width-ratio margin, odd rows, static-null gain
+PASS base PLASMON-W/replay.py (exit 0)
+PASS: exact odd rows, active profile, collapse, residual and flat temporal margins
+PASS base PHYS-Q2/replay.py (exit 0)
+PASS: exact quadratic forms, complement, angular lock, and flat angular row split
+PASS base PHYS-Q2/independent.py (exit 0)
+CERTIFIED finite signs, single crossings, convolution and uniform reserve
+PASS base CENTERED-GAP/replay.py (exit 0)
+CERTIFIED 1008 exact finite centered edge matrices
+PASS base CENTERED-GAP/independent.py (exit 0)
+CERTIFIED 48 determinant identities, Harnack budgets and finite-DOS external family
+PASS base GENERAL/replay.py (exit 0)
+CERTIFIED 36 rational causal pairs and 216 exact Poisson comparisons
+PASS base GENERAL/independent.py (exit 0)
+PASS mutant replay.py loss-sign (exit 1): REJECT: retarded pole sign and weight
+PASS mutant replay.py fs-jacobian (exit 1): REJECT: angular Jacobian
+PASS mutant replay.py fold-sign (exit 1): REJECT: folded sign and factor
+PASS mutant replay.py hankel-cap (exit 1): REJECT: Hankel Schur gap
+PASS mutant replay.py moment-fold (exit 1): REJECT: zero signed moment witness
+PASS mutant replay.py bulk-fold (exit 1): REJECT: bulk prefactor
+PASS mutant replay.py cross-cap (exit 1): REJECT: cross estimate identity and maximum
+PASS mutant replay.py sumzero (exit 1): REJECT: plasmon static-null gain margin
+PASS mutant replay.py partner-line (exit 1): REJECT: enhanced partner suppressed
+PASS mutant replay.py dos-aggregation (exit 1): REJECT: sector Cooper fiber compression
+PASS mutant independent.py static-null (exit 1): REJECT: instantaneous rank-one annihilator
+PASS mutant independent.py screening-diagonal (exit 1): REJECT: retained first diagonal after mass cancellation
+PASS mutant independent.py hard-normal (exit 1): REJECT: hard line gives little folded first-mode mass
+PASS mutant independent.py signed-budget (exit 1): REJECT: signed moment cancellation
+PASS mutant independent.py reciprocal-normal (exit 1): REJECT: reciprocity with channel measures: geometric, not row, cross weight
+PASS mutant SHARP-Q2/replay.py tail-reserve (exit 1): REJECT: tail covers completion and reserve
+PASS mutant SHARP-Q2/replay.py head-tail-fold (exit 1): REJECT: exact head-tail determinant threshold
+PASS mutant SHARP-Q2/replay.py tail-mass (exit 1): REJECT: retain both normal diagonals in completion
+PASS mutant SHARP-Q2/replay.py head-lock (exit 1): REJECT: imbalanced head PSD via angular lock
+PASS mutant SHARP-Q2/replay.py loss-budget (exit 1): REJECT: imbalance covers head-tail losses
+PASS mutant SHARP-Q2/replay.py endpoint-factor (exit 1): REJECT: ordered endpoint budget
+PASS mutant SHARP-Q2/replay.py perron-ratio (exit 1): REJECT: ordered endpoint budget
+PASS mutant SHARP-Q2/replay.py soft-witness (exit 1): REJECT: independent-weight relaxation has a strict head instability
+PASS mutant SHARP-Q2/independent.py omit-head-lock (exit 1): REJECT: finite edge PSD: (1, 0, 0, 0), (1, 0, 0, 0), r=1/60, t=1/1000
+PASS mutant SHARP-Q2/independent.py extra-reflection (exit 1): REJECT: finite edge PSD: (1, 0, 0, 0), (1, 0, 0, 0), r=1, t=1/1000
+PASS mutant SHARP-Q2/independent.py undressed-gain (exit 1): REJECT: finite edge PSD: (1, 0, 0, 0), (Fraction(1, 3), Fraction(1, 4), Fraction(2, 3), 0), r=1/60, t=1/1000
+PASS mutant SHARP-Q2/independent.py no-soft-margin (exit 1): REJECT: finite edge PSD: (1, 0, 0, 0), (1, 0, 0, 0), r=1, t=1/1000
+PASS mutant SHARP-Q2/independent.py missing-ordered-copy (exit 1): REJECT: reciprocal unordered/ordered factors
+PASS mutant PLASMON-W/replay.py head-fold (exit 1): REJECT: matched diagonal cancellation
+PASS mutant PLASMON-W/replay.py partner-diagonal (exit 1): REJECT: matched diagonal cancellation
+PASS mutant PLASMON-W/replay.py ratio-endpoint (exit 1): REJECT: strict width-ratio endpoint
+PASS mutant PLASMON-W/replay.py tail-row (exit 1): REJECT: integral tail loss leaves a quarter of the head
+PASS mutant PLASMON-W/replay.py tail-spread (exit 1): REJECT: integral tail loss leaves a quarter of the head
+PASS mutant PLASMON-W/replay.py static-sign (exit 1): REJECT: instantaneous null
+PASS mutant PLASMON-W/replay.py omitted-normal (exit 1): REJECT: matched diagonal cancellation
+PASS mutant PHYS-Q2/replay.py normal-sign (exit 1): REJECT: odd normal row with exact remainder
+PASS mutant PHYS-Q2/replay.py head-tail-factor (exit 1): REJECT: head-to-tail square sum
+PASS mutant PHYS-Q2/replay.py tail-reserve (exit 1): REJECT: residual norm budget
+PASS mutant PHYS-Q2/replay.py collapse-strict (exit 1): REJECT: collapsed component min ratio
+PASS mutant PHYS-Q2/replay.py effective-mass (exit 1): REJECT: effective moment divides by one power of beta
+PASS mutant PHYS-Q2/replay.py flat-hard-alt (exit 1): REJECT: negative flat temporal bound for hard lines
+PASS mutant PHYS-Q2/replay.py flat-cross-tail (exit 1): REJECT: flat two-head cross remainder and completion
+PASS mutant PHYS-Q2/replay.py flat-soft-trial (exit 1): REJECT: soft positive spectral top beats negative cap
+PASS mutant PHYS-Q2/independent.py ordered-copy (exit 1): REJECT: overlapping support and complement, full matched congruence
+PASS mutant PHYS-Q2/independent.py lock-factor (exit 1): REJECT: same-frequency angular lock coefficient
+PASS mutant PHYS-Q2/independent.py head-fold (exit 1): REJECT: overlapping support and complement, full matched congruence
+PASS mutant PHYS-Q2/independent.py flat-edge-sign (exit 1): REJECT: flat signed temporal split retains nonnegative angular normal row
+PASS mutant CENTERED-GAP/replay.py folded-numerator (exit 1): REJECT: positive reflected numerator
+PASS mutant CENTERED-GAP/replay.py upper-cone-sign (exit 1): REJECT: upper-cone kernel crossing
+PASS mutant CENTERED-GAP/replay.py lower-cone-product (exit 1): REJECT: lower-cone kernel crossing
+PASS mutant CENTERED-GAP/replay.py convolution-shift (exit 1): REJECT: shifted convolution decomposition
+PASS mutant CENTERED-GAP/replay.py head-determinant (exit 1): REJECT: exact head determinant
+PASS mutant CENTERED-GAP/replay.py middle-imbalance (exit 1): REJECT: far, intermediate and retained tail reserves
+PASS mutant CENTERED-GAP/replay.py drop-complement (exit 1): REJECT: average using the complementary DOS
+PASS mutant CENTERED-GAP/replay.py edge-copy (exit 1): REJECT: two endpoint costs and onset units
+PASS mutant CENTERED-GAP/replay.py exact-reserve (exit 1): REJECT: unrounded onset coefficient squared
+PASS mutant CENTERED-GAP/independent.py erase-first-tail (exit 1): REJECT: exact centered edge PSD at t=1/1000, r=2/3, left=(Fraction(1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), right=(Fraction(1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+PASS mutant CENTERED-GAP/independent.py double-mixed-pair (exit 1): REJECT: exact centered edge PSD at t=1/1000, r=1/100, left=(Fraction(1, 1), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)), right=(Fraction(1, 1), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1))
+PASS mutant CENTERED-GAP/independent.py overfold-normal (exit 1): REJECT: exact centered edge PSD at t=1/1000, r=2/3, left=(Fraction(1, 1), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)), right=(Fraction(1, 1), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1))
+PASS mutant GENERAL/replay.py harnack-sign (exit 1): REJECT: Poisson quadratic determinant identity
+PASS mutant GENERAL/replay.py pick-factor (exit 1): REJECT: first two Matsubara Schwarz-Pick coefficient
+PASS mutant GENERAL/replay.py complement (exit 1): REJECT: complementary Harnack head reserve
+PASS mutant GENERAL/replay.py reserve-sign (exit 1): REJECT: improved coefficient square
+PASS mutant GENERAL/replay.py external-fold (exit 1): REJECT: external-shift head instability margin
+PASS mutant GENERAL/replay.py tail-cost (exit 1): REJECT: external-shift head instability margin
+PASS mutant GENERAL/replay.py moment-units (exit 1): REJECT: moment and temperature units
+PASS mutant GENERAL/replay.py causal-admission (exit 1): REJECT: witness cannot be admitted as a causal normal branch
+PASS mutant GENERAL/independent.py self-energy-sign (exit 1): REJECT: positive Nevanlinna normal width
+PASS mutant GENERAL/independent.py poisson-fold (exit 1): REJECT: independent pointwise Poisson Harnack test
+PASS mutant GENERAL/independent.py endpoint-ratio (exit 1): REJECT: independent pointwise Poisson Harnack test
+PASS all 70 mutant rejections
+Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)
+PASS Lean Finite.lean (exit 0)
+PASS Lean SHARP-Q2/Finite.lean (exit 0)
+PASS Lean PLASMON-W/Finite.lean (exit 0)
+PASS Lean PHYS-Q2/Finite.lean (exit 0)
+PASS Lean CENTERED-GAP/Finite.lean (exit 0)
+PASS Lean GENERAL/Finite.lean (exit 0)
+note: Running TeX ...
+note: Running BibTeX on main.aux ...
+note: Rerunning TeX because bibtex was run ...
+note: Rerunning TeX because "main.aux" changed ...
+note: Running xdvipdfmx ...
+note: Writing `main.pdf` (156.576171875 KiB)
+note: Skipped writing 3 intermediate files (use --keep-intermediates to keep them)
+PASS Tectonic (exit 0)
+Fontconfig error: Cannot load default config file: No such file: (null)
+warning: main.bbl:46: Underfull \hbox (badness 1769) in paragraph at lines 40--46
+warning: main.bbl:46: Underfull \hbox (badness 1803) in paragraph at lines 40--46
+warning: main.bbl:63: Underfull \hbox (badness 1748) in paragraph at lines 55--63
+warning: main.bbl:63: Underfull \hbox (badness 1490) in paragraph at lines 55--63
+warning: main.bbl:46: Underfull \hbox (badness 1769) in paragraph at lines 40--46
+warning: main.bbl:46: Underfull \hbox (badness 1803) in paragraph at lines 40--46
+warning: main.bbl:63: Underfull \hbox (badness 1748) in paragraph at lines 55--63
+warning: main.bbl:63: Underfull \hbox (badness 1490) in paragraph at lines 55--63
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+
+SHIFTED CLEAN COMPLETE VERIFIER EXIT 0

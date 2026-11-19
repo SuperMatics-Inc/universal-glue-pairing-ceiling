@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "Please cite the paper and its replay supplement."
+title: "Replay supplement for What a glue moment bounds in linear Eliashberg theory"
+type: software
+version: 1.0.0
+date-released: 2026-11-19
+doi: 10.5281/zenodo.24372929
+url: https://github.com/SuperMatics-Inc/universal-glue-pairing-ceiling
+license: Apache-2.0
+authors:
+  - family-names: Rens
+    given-names: Davis
+    affiliation: SuperMatics Inc.
+    orcid: https://orcid.org/0000-0001-5839-5197
+preferred-citation:
+  type: unpublished
+  title: "What a glue moment bounds in linear Eliashberg theory"
+  doi: 10.5281/zenodo.24372930
+  year: 2026
+  authors:
+    - family-names: Rens
+      given-names: Davis
+      affiliation: SuperMatics Inc.
+      orcid: https://orcid.org/0000-0001-5839-5197

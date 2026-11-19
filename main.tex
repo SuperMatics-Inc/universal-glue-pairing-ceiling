@@ -1,0 +1,335 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\Cinf}{C_\infty}
+\newcommand{\Tlin}{T_{\rm lin}}
+\newcommand{\FINITEBANDDOI}{\href{https://doi.org/10.5281/zenodo.24364879}{\mbox{10.5281/zenodo.24364879}}}
+\newcommand*{\UNIVGLUEDOI}{\href{https://doi.org/10.5281/zenodo.24372930}{\mbox{10.5281/zenodo.24372930}}}
+\newcommand*{\UNIVGLUESUPPDOI}{\href{https://doi.org/10.5281/zenodo.24372929}{\mbox{10.5281/zenodo.24372929}}}
+\newcommand*{\UNIVGLUEREPO}{\href{https://github.com/SuperMatics-Inc/universal-glue-pairing-ceiling}{\texttt{universal-glue-pairing-ceiling}}}
+% Print optional staging identifiers only when the corresponding macro is set.
+\newcommand{\ifstaged}[3]{\ifx#1\empty #3\else #2\fi}
+\title{What a glue moment bounds in linear Eliashberg theory}
+\author{Davis Rens\\SuperMatics Inc.\\ \href{https://orcid.org/0000-0001-5839-5197}{ORCID 0000-0001-5839-5197}}
+\date{19 November 2026\ifstaged{\UNIVGLUEDOI}{\\[3pt]\small\UNIVGLUEDOI}{}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Under an unsubtracted dispersion relation with no zero-frequency endpoint term, a passive scalar screened interaction has a positive bosonic spectral measure for its attractive retarded part. The sharp matched scalar Eliashberg ceiling uses the total glue moment, not the phonon moment, when the instantaneous subtraction is positive semidefinite. For coupled channels with energy-dependent densities of states, the height-weighted moment-operator norm gives a ceiling with coefficient $1/(\pi\sqrt2)$, optimal for independent Matsubara weights and for self-consistent imaginary branches with unrestricted externally prescribed real shifts. For finitely many matched channels with centered normal branches, the smaller scalar coefficient is sharp in a common soft limit, uniformly over different channel densities of states. It also holds for sufficiently broad centered bands at fixed glue. At arbitrary glue energies the centered class admits the smaller upper coefficient $U=\sqrt{6466219/3576050}/(2\pi)\simeq0.2140146706$, not asserted to be sharp. The same upper coefficient holds with arbitrary frequency-dependent real shifts if the channel-wise normal effective frequency is a holomorphic upper-half-plane self-map. The coupled relative-real optimum and any shifted-versus-centered excess remain open; causality of the glue alone is not the normal-propagator hypothesis. The spherical Fermi-surface Coulomb moment diverges logarithmically in three dimensions. In a projected single-plasmon model the onset diverges as the forward cutoff is removed, even at fixed electronic bandwidth and with the instantaneous repulsion retained. This does not apply to full-momentum jellium, for which we give a finite sufficient estimate on a bounded momentum domain. We also exhibit an example in which more normal scattering raises the finite-band onset.
+\end{abstract}
+
+\section{Passive scalar transfer and the sharp matched ceiling}
+Write $\tau=k_BT$ and use energies for bosonic and fermionic frequency variables. On a positive reflected normal branch, $\Tlin$ is the supremum of temperatures at which the linearized pairing stability form has a negative direction, or zero if the set is empty. Let $W^R$ be a reciprocal scalar retarded transfer, obey the reality relation, and tend to a finite real $U$ at high frequency. Assume $W^R-U$ obeys an unsubtracted dispersion relation exhausted by the reflected positive-frequency loss $\dd B=-\pi^{-1}\operatorname{Im}W^R(E+i0)\dd E$, a nonnegative measure including any atoms at $E>0$. No singular contribution supported at zero frequency is allowed. Pairing the positive- and negative-energy halves of the dispersion integral gives
+\begin{align}
+ W(i\nu)&=U-K(\nu), & K(\nu)&=\int_0^\infty\frac{\dd\mathfrak m(E)}{E^2+\nu^2}, & \dd\mathfrak m(E)&=2E\dd B(E).
+\end{align}
+The two Cauchy factors give $(i\nu-E)^{-1}-(i\nu+E)^{-1}=-2E/(E^2+\nu^2)$. The integral must be defined at nonzero $\nu$; finiteness of $K(0)=\int E^{-2}\dd\mathfrak m$ is a separate condition. An excluded term such as $a/z^2$ would give $-a/\nu^2$ despite zero loss on the open positive axis. By monotone convergence, $J=\int\dd\mathfrak m$ equals $\lim_{|\nu|\to\infty}\nu^2K(\nu)$, possibly infinite. Neither passivity nor pointwise repulsion implies that $U$ is positive semidefinite (PSD) on the pairing Hilbert space. For example, the real frequency-independent two-channel matrix with diagonal $1$ and off-diagonal $3$ has zero loss and is pointwise positive, but has eigenvalue $-2$ in the antisymmetric channel. Passivity of a matrix response yields a PSD loss in the response space, not necessarily a nonnegative scalar measure in each reciprocal pairing transfer.
+
+\begin{theorem}[Sharp single-channel bound]
+Let $N_{\max}$ be the finite positive height of the electronic density of states (DOS). Assume $0<K(0),J<\infty$, and use the same DOS and the same radially independent retarded transfer in pairing and normal self-energy, with no vertex terms. Use a positive reflected branch satisfying both the odd normal equation and the real normal equation relative to the zeroth Matsubara mode, with ordinary Matsubara-order convergence as specified in the scalar finite-band manuscript~\cite{finite}. A bounded PSD instantaneous subtraction in the pairing form is allowed. Then
+\[
+ k_B\Tlin<\Cinf\sqrt{N_{\max} J},\qquad \Cinf\simeq 0.1827262478.
+\]
+The constant over this class cannot be decreased.
+\end{theorem}
+\begin{proof}
+Import the theorem titled ``Self-consistent DOS, computer-assisted'' from the section on frequency-dependent centers in Rens's finite-band manuscript~\cite{finite}. It assumes a nonzero bounded scalar DOS and a positive measure of finite positive coupling and moment. On all positive reflected solutions of both normal equations with the stated relative convergence, it gives a stable interval extending strictly below the nominal ceiling. It also gives sharpness with a family of finite-mass DOS and soft Einstein spectra. The scalar equations here match its inputs for any $N_{\rm ref}>0$ under the identification
+\[
+ \dd\lambda=N_{\rm ref}E^{-2}\dd\mathfrak m,\qquad
+ M=N_{\rm ref}J,\qquad A=N_{\max}/N_{\rm ref}.
+\]
+The imported result has no static pairing subtraction. On the same propagators a PSD subtraction only lowers the spectral top, and the zero-subtraction sharpness family remains admissible. A static scalar shift can be absorbed into the dispersion. No statement about a nonlinear thermodynamic or exact Hamiltonian transition follows.
+\end{proof}
+
+A sharp reduction also allows heterogeneous DOS profiles. Decompose channels into disjoint sectors with no intersector retarded transfer. Within each sector the identical normal and anomalous retarded transfer must be independent of both angles and both radial energies. Absorb frequency-independent channel shifts into the dispersion, and require integrable DOS heights, $\int N_{\max}(x)\dd\mu(x)<\infty$, and the same branch and convergence conditions as in the scalar theorem. The dynamic normal widths and relative shifts are common within a sector, and the normal equations reduce to the scalar equations with $N_\Sigma(\xi)=\int N_x(\xi)\dd\mu(x)$. The \emph{retarded} pairing operator compresses to one Cooper vector at each frequency and vanishes on its orthogonal complement. Use the scale $\sqrt{J\operatorname{ess\,sup}N_\Sigma}$ for that sector; the height can be strictly smaller than the sum of individual heights. A PSD static term need not preserve the reduction: comparison still works on the full space, including if that term mixes sectors.
+
+\section{A height-weighted comparison for coupled channels}
+Use a reciprocal channel space with measure $\dd\eta=N_{\max}\dd\mu$, omitting zero-height channels and requiring finite local heights. The model transfers are independent of both radial energies. On the actual positive reflected branch, $b_n(x)$ is the Poisson average of the height-normalized DOS at the real shift and width $\pi\tau s_n(x)$. Thus $0\le b_n\le1$. Set $w_n=2n+1$ for $n\ge0$. The pairing envelope $K_j$ is a reciprocal positive Lorentzian mixture at $2\pi\tau j$, even in $j$, bounding the modulus of the actual transfer. Its direct block is $D_{nm}=K_{|n-m|}$; its reflected block is $H_{nm}=K_{n+m+1}$. Their difference $P=D-H$ is entrywise nonnegative. The actual normal width is
+\[
+ s_n(x)=w_n+\sum_m\int P_{nm}^N(x,y)b_m(y)\dd\eta(y),
+\]
+with bounded normal rows at each temperature. We require $P^N\ge P$ entrywise. Spectral measure dominance implies this folded order. Raw transfer dominance does not: if $R>1$ then $4R^2/(R^2+j^2)$ dominates $4/(1+j^2)$, but its folded $(0,0)$ entry is $4/(R^2+1)<2$.
+
+\begin{theorem}[Coupled-channel norm ceiling]\label{thm:norm}
+Let the channel measure be sigma-finite with measurable transfer kernels, let the normal rows be bounded, and suppose the zero-transfer pairing envelope $K_0$ is bounded on $L^2(\dd\eta)$. Assume the pairing and normal forms described above are defined on the branch, with bounded PSD instantaneous subtraction. If the reciprocal moment operator with kernel $J(x,y)=\int\dd\mathfrak m_{xy}$ has finite positive norm $\rho$, then
+\[
+ k_B\Tlin<\frac{\sqrt{\rho}}{\pi\sqrt2},
+ \qquad \frac{1}{\pi\sqrt2}\simeq0.2250790790.
+\]
+Strictness holds for these hypotheses also on a continuum, at fixed spectrum. The coefficient is optimal if the weights $b_n(x)$ are allowed to vary independently in $[0,1]$, and also for the finite-DOS external-shift class described below. For actual coupled branches without an established causal continuation the best universal coefficient lies in $[\Cinf,1/(\pi\sqrt2)]$; a smaller upper bound follows under the causal normal-propagator hypothesis below.
+\end{theorem}
+\begin{proof}
+Take moduli and fold reflection pairs by their root-mean-square amplitudes; Cauchy--Schwarz bounds the direct and reflected bilinear terms by their even comparator. A PSD subtraction and the additional diagonal normal cost can only help. Write $f_{x,n}=\sqrt{b_n(x)s_n(x)}v_{x,n}$ and $g_{x,n}=\sqrt{w_n b_n(x)}v_{x,n}$. The stability form after these comparisons has bare part $\int\|g_x\|^2\dd\eta(x)$ and interaction part
+\[
+ \frac{1}{2(2\pi\tau)^2}\iint\int I_{xy}(t)\,\dd\mathfrak m_{xy}(E)\dd\eta(x)\dd\eta(y),
+ \qquad t=E^2/(2\pi\tau)^2 .
+\]
+For each ordered pair and atom set $k_j=(t+j^2)^{-1}$, $h=k_{n+m+1}$, $p=k_{|n-m|}-h$, and $S=p+2h$. Then $I_{xy}$ is the sum over $n,m\ge0$ of
+\[
+ b_n(x)b_m(y)\big[p(|v_{x,n}|^2+|v_{y,m}|^2)-2S\operatorname{Re}(\bar v_{x,n}v_{y,m})\big].
+\]
+The factor $1/2$ accounts for ordered angular pairs. For any $r>0$ set $B_r=r^{-1}\|g_x\|^2+r\|g_y\|^2$. We claim
+\[
+ B_r+I_{xy}(t)/2\ \ge\ \delta(t) B_r,\qquad
+ \delta(t)=\min\{1/64,t/(1+t)\}.
+\]
+For finite frequency support, the expression with $v$ held fixed is affine in each weight at each endpoint. It is enough to prove the inequality for weights $0$ and $1$, using two independent copies even for an angular loop. Terms joining an active to an omitted frequency contribute nonnegative normal cost. Write $a_n=g_{x,n}/\sqrt r$, $d_n=\sqrt r\,g_{y,n}$ on active modes. At $n,m\ge1$ drop the positive $p$-square; the remaining Hankel tail costs at most $1/12$ of the tail norm. Indeed the Schur weights $w_n^{-1/2}$ bound its norm by $\sum_{m\ge1}[(2m+1)(m+2)^2]^{-1}<1/12$, by summing through $16$ and integrating the remainder.
+
+Keep $1/12$ of the tail norm in reserve and use $5/6$ to control cross terms between index zero and the tail. An active pair $a_0,d_m$ has diagonal costs $rp/2$ and $5/6+p/(2rw_m)$, with mixed term $-S\operatorname{Re}(\bar a_0d_m)/\sqrt{w_m}$. Its determinant is nonnegative when $5/6\ge2/(rw_m^2)$, since $(S^2-p^2)/(w_mp)=4/w_m^2$. Thus in $1/3\le r\le3$ both directions cost nothing extra. At other $r$ the loss at either head after completing the square is at most $59/320$, from $\sum_{m\ge1}S^2/w_m\le25/48+2\sum_{m\ge2}m^{-5}\le59/96$, divided by $4(5/6)$.
+
+If both heads are present, their matrix is
+\[
+ \begin{pmatrix}1+\beta r&-\beta-u\\-\beta-u&1+\beta/r\end{pmatrix},
+ \qquad \beta=[2t(1+t)]^{-1},\quad u=(1+t)^{-1}.
+\]
+It is the sum of a PSD rank-one matrix and a matrix with least eigenvalue $1-u$. When $r\notin[1/3,3]$ it is bounded below by $I/5$: for $t\ge1/4$ use $u\le4/5$; otherwise $\beta\ge8/5$ and $r+r^{-1}\ge10/3$ give the determinant after subtracting $I/5$ at least $-9/25+(8/5)(2/3)>0$. The diagonal entries after subtracting $I/5$ are positive. After cross losses the margin is $1/5-59/320=1/64$. If only one head is active it has the entire bare cost before cross losses. This proves the claim with the tail reserve.
+
+Let $\mathcal M_\delta$ be the moment operator with each spectral element weighted by $1-\delta(t)$. For $R_0>\|\mathcal M_\delta\|$, set $q=(I-\mathcal M_\delta/R_0)^{-1}\phi$ for any strictly positive $\phi\in L^2(\dd\eta)$. Positivity of the Neumann series gives $\mathcal M_\delta q\le R_0 q$. Choose $r=q(x)/q(y)$ on each edge. Integrating the two allocated bare costs by reciprocity gives
+\[
+ Q\ge \left(1-\frac{2R_0}{(2\pi\tau)^2}\right)\|g\|^2 .
+\]
+This form bound extends by density, and bounded normal rows ensure $\|g\|^2$ controls the symmetrized gap norm. A positive gap therefore holds when $(2\pi\tau)^2>2\|\mathcal M_\delta\|$. To see strictness near $\tau_*=\sqrt\rho/(\pi\sqrt2)$, choose $E_0>0$ with $E_0^2\|K_0\|<\rho/2$. The moment below $E_0$ is bounded in norm by this quantity. For $\tau\le 2\tau_*$ the remaining moment has a uniformly positive deficit $d_0=\delta(E_0^2/(4\pi\tau_*)^2)$, so $\|\mathcal M_\delta\|\le(1-d_0/2)\rho$. Stability starts strictly below $\tau_*$. For the optimality statement, a scalar relaxation with $b_0=1$ and $b_{m>0}=0$ has head gain $2c/(1+t)$, where $c=\rho/(2\pi\tau)^2$. For any $c>1/2$ it is unstable at small positive $t$. Such weights are not a Poisson average of a fixed nonzero DOS; the lower endpoint for actual branches comes from the sharp scalar theorem.
+\end{proof}
+
+For a constant DOS, folded normal dominance also gives a diagonal congruence with multiplier $\sqrt{s^P/s^N}\le1$ in the matched flat comparator. The sharp flat angular moment bound is already known~\cite[Theorems 7--9]{gsi}. Below we give another proof for finite channel sets and extend it by a fixed-spectrum broad-band limit. This does not justify comparing different self-consistent states for arbitrary finite bands.
+
+The PSD comparison on fixed propagators follows directly from the congruence $L^*UL$ for any admissible vertex map $L$, not necessarily a symmetric cutoff function. Cutting on the frequency transfer is a different operation and can destroy PSD.
+
+\section{Sharp regimes on actual coupled normal branches}
+
+\begin{theorem}[A uniform centered-branch improvement]\label{thm:centered-gap}
+Under the form hypotheses of Theorem~\ref{thm:norm}, take finitely many channels with nonnegative integrable even DOS bounded by their channel heights and no real normal shifts. Assume the normal kernel is a reciprocal positive Lorentzian mixture with bounded folded rows and dominates the folded pairing envelope. Then
+\[
+ k_B\Tlin<U\sqrt\rho,
+ \qquad U=\frac1{2\pi}\sqrt{\frac{6466219}{3576050}}\simeq0.2140146706.
+\]
+Consequently the best coefficient on this centered class lies in $[\Cinf,U]$. Its exact value remains open; $U$ is a valid upper bound, not a sharp constant. The next theorem carries this upper bound to causal shifted branches. The independent-weight and unrestricted external-shift coefficients remain $1/(\pi\sqrt2)$.
+\end{theorem}
+\begin{proof}[Proof sketch]
+The full proof, including the infinite-row identities and all allocation cases, is in \texttt{CENTERED-GAP/RIGOR.md} in the accompanying bundle. Here we give its structure. Write $b_x(s)$ for a channel's Poisson DOS average. Differentiating the kernel gives $|s b'_x(s)|\le b_x(s)$, also for the bounded complementary DOS $1-r_x$. The centered normal update preserves the cone in which $s_n/w_n$ decreases and $w_ns_n$ increases. For a unit Lorentzian this follows from two row identities, with $C_t=\sum_{j\in\mathbb Z}(j^2+t)^{-1}$:
+\[
+ \sum_m p_{nm}\frac{w_m}{w_n}=C_t,\qquad
+ \sum_m p_{nm}\frac{w_n}{w_m}=C_t\frac{w_n^2}{w_n^2+4t}.
+\]
+Successive row differences have a single negative-to-positive crossing. Testing respectively against decreasing $b_m/w_m$ and increasing $w_mb_m$ preserves the cone. The normal map on $w_n\le s_{n,x}\le w_n+R$ is a contraction in log widths with factor at most $R/(1+R)$, so its unique branch inherits the cone. It follows that $b_{1,x}\ge1-3(1-b_{0,x})$ by applying the slope bound to the complementary DOS.
+
+In the ordered edge estimate of Theorem~\ref{thm:norm}, keep the tail bound $1/12$ and allocate $\alpha=41/50$ to the head-to-tail squares. The remaining tail reserve is $29/300$. For two active heads their matrix is
+\[
+ H_0=\begin{pmatrix}1+\beta r&-\beta-u\\-\beta-u&1+\beta/r\end{pmatrix},
+ \quad u=(1+t)^{-1},\quad \beta=\frac{u^2}{2(1-u)}.
+\]
+It is bounded below both by $(1-u)I$ and by $[1-2/(r+r^{-1})]I$. Completing the head-to-tail squares gives head reserves at least $8369/39360$ when $r\notin[1/3,3]$, $1/10$ when $r\in[1/3,3]$ and $t\ge1/9$, and $121/1261$ when $r\in[1/3,3]\setminus[19/30,30/19]$ and $t<1/9$.
+
+In the remaining range, the square coupling an active head to opposing frequency 1 leaves the extra head diagonal
+\[
+ D_1=\frac{p(r\alpha/2-1/9)}{\alpha+p/(6r)},\qquad p=k_1-k_2\in[243/370,3/4].
+\]
+Put $a=r\alpha/2-1/9>0$ and $z=\alpha+p/(6r)>0$. Its derivatives are $\partial_pD_1=a\alpha/z^2>0$ and $\partial_rD_1=p[(\alpha/2)z+ap/(6r^2)]/z^2>0$. Thus on $r\in[19/30,30/19]$ one has $D_1\ge d_+=685881/6979600$. Independent Bernoulli masks at the two endpoints therefore give averaged reserve at least
+\[
+ 1-b_{0,y}+d_+ b_{1,y}\ge d_++(1-3d_+)(1-b_{0,y})\ge d_+.
+\]
+The minimum $\delta_*$ of these four head reserves and the tail reserve is strictly greater than $d=685881/7152100$. Thus $B_r+I_{xy}/2\ge\delta_* B_r$ uniformly in the atom, branch and allocation ratio. Integrating with the positive superharmonic allocation of Theorem~\ref{thm:norm} gives
+\[
+ Q\ge\left[1-\frac{2(1-\delta_*)\rho}{(2\pi\tau)^2}\right]\|g\|^2.
+\]
+Since $2(1-\delta_*)<2(1-d)=6466219/3576050$, stability starts strictly below the stated threshold. Additional folded normal cost and a bounded PSD pairing subtraction are harmless. The scalar centered soft family supplies the lower endpoint of the coefficient bracket.
+\end{proof}
+
+\begin{proposition}[Poisson comparison under arbitrary causal shifts]\label{prop:harnack}
+Let $Z$ be a holomorphic self-map of the upper half-plane, $z_0=Z(i\omega)$ and $z_1=Z(iK\omega)$, where $\omega>0$ and $K>1$. For $q_a(x+iu)=u/[(a-x)^2+u^2]$,
+\[
+ K^{-1}q_a(z_0)\le q_a(z_1)\le Kq_a(z_0)\qquad(a\in\mathbb R).
+\]
+If $0\le r(a)\le1$ is any fixed normalized density of states, its Poisson weights at the first two fermionic Matsubara frequencies satisfy
+\[
+ b_1\ge1-3(1-b_0),\qquad
+ b_n=\pi^{-1}\int r(a)q_a\bigl(Z(i\pi\tau w_n)/(\pi\tau)\bigr)\dd a.
+\]
+Here the energy coordinate in $r$ is scaled by $\pi\tau$ at the chosen temperature. No centering, even DOS, monotone widths, or common channel DOS is required.
+\end{proposition}
+\begin{proof}
+Schwarz--Pick gives
+\[
+ |z_1-z_0|^2\le\frac{(K-1)^2}{K}u_0u_1,\qquad u_j=\Im z_j>0.
+\]
+After clearing positive denominators, $Kq_a(z_0)-q_a(z_1)\ge0$ is the quadratic $Aa^2-2Ba+C\ge0$, with
+\[
+ A=Ku_0-u_1,\quad B=Ku_0x_1-u_1x_0,\quad
+ C=Ku_0(x_1^2+u_1^2)-u_1(x_0^2+u_0^2).
+\]
+Its determinant is
+\[
+ AC-B^2=Ku_0u_1\left[\frac{(K-1)^2}{K}u_0u_1-(x_1-x_0)^2-(u_1-u_0)^2\right]\ge0.
+\]
+Schwarz--Pick also implies $u_0/K\le u_1\le Ku_0$, so $A\ge0$. For $A>0$ complete the square. If $A=0$, the same condition forces $x_1=x_0$, whence $B=0$ and $C=u_0u_1(Ku_1-u_0)>0$. Swapping endpoints proves the other inequality. Integrate against $r$ and, separately, against $1-r$. Both Poisson integrals exist since the integrands are bounded by an integrable Poisson kernel; its integral is $\pi$. At $K=w_1/w_0=3$, the upper comparison for the complementary DOS gives $1-b_1\le3(1-b_0)$.
+\end{proof}
+
+\begin{theorem}[Finite-channel causal shifted normal branches]\label{thm:causal-shift}
+Retain the reciprocal, radial-energy-independent model, bounded normal rows, finite moment norm $0<\rho<\infty$, positive-energy Lorentzian measures, and stability-form hypotheses of the coupled norm theorem. There are finitely many positive-height channels, each with a fixed nonnegative DOS bounded by that height. At every tested temperature assume that each channel has one holomorphic upper-half-plane self-map $Z_x$ with
+\[
+ \frac{Z_x(i\pi\tau w_n)}{\pi\tau}=x_{n,x}+is_{n,x},\qquad
+ b_{n,x}=\frac1\pi\int\frac{r_x(a)s_{n,x}}{(a-x_{n,x})^2+s_{n,x}^2}\dd a.
+\]
+The $s_{n,x}$ obey the matched imaginary normal equation. The same eligible folded-normal dominance and bounded PSD pairing subtraction as in the centered theorem are allowed. Then
+\[
+ k_B\Tlin<U\sqrt\rho,\qquad U=\frac{\sqrt{6466219/3576050}}{2\pi}.
+\]
+The normal-propagator assumption is pointwise in radial energy: $G_{x,\xi}(z)=[Z_x(z)-\xi]^{-1}$ is holomorphic with negative imaginary part. It is equivalent to the stated self-map property in this parameterization. A self-energy with $-\Sigma_x$ Nevanlinna is sufficient. Causality of the interaction, or of an angularly averaged propagator alone, is not a replacement. For a solution of the full ME normal problem the relative real equation must also hold; that equation by itself has not been proved here to imply a causal continuation.
+\end{theorem}
+\begin{proof}
+The ordered-edge reserve proof of the centered theorem after its DOS comparison uses only unit-box weights and $b_{1,x}\ge1-3(1-b_{0,x})$. Proposition~\ref{prop:harnack} supplies exactly this inequality, including arbitrary shifts. In the intermediate angular range retain
+\[
+ D_1=\frac{p(r\alpha/2-1/9)}{\alpha+p/(6r)},\qquad
+ \alpha=41/50,\quad 19/30\le r\le30/19,\quad243/370\le p\le3/4.
+\]
+The positive derivatives in both $p$ and $r$ give its minimum $d_+=685881/6979600$. Bernoulli averaging of an absent opposing head and an active opposing frequency 1 now gives
+\[
+ 1-b_{0,y}+d_+b_{1,y}\ge d_++(1-3d_+)(1-b_{0,y})\ge d_+.
+\]
+The other reserves are $8369/39360$, $1/10$, $121/1261$, and $29/300$. Their minimum together with $d_+$ is strictly greater than $d=685881/7152100$. Consequently the same two-endpoint allocation and positive moment resolvent give
+\[
+ Q\ge\left[1-\frac{2(1-\delta_*)R'}{(2\pi\tau)^2}\right]\|g\|^2,
+ \quad R'>\rho,\quad
+ \delta_*=\min\{8369/39360,1/10,121/1261,29/300,d_+\}>d.
+\]
+Take $R'\downarrow\rho$. Since $2(1-d)=6466219/3576050$, there is a uniform stable interval starting strictly below $U\sqrt\rho$, not merely exclusion at that endpoint. Bounded normal rows transfer the positive bare-form margin to the symmetrized pairing norm. Additional eligible normal cost and PSD pairing subtraction are nonnegative forms. No comparison of the different channel real shifts is needed.
+\end{proof}
+
+\paragraph{Necessity of branch control: sharp external shifts.}
+Dropping both causal continuation and the relative real equation leaves a larger class, even with a fixed finite-mass DOS for each model and a full self-consistent imaginary equation. Its best coefficient is $1/(\pi\sqrt2)$. Here is an explicit construction. Set $\tau=1/(2\pi)$ and, for $0<\varepsilon_0\le1/4$, put
+\[
+ c=1/2+\varepsilon_0,\quad t=\varepsilon_0,\quad
+ \epsilon=\frac{\varepsilon_0}{12c},\quad
+ W=\frac{2(1+c/t+c\epsilon)}{\epsilon},\quad
+ R=\frac{W}{2\epsilon},\quad L=W+R.
+\]
+Use $r=1_{[-W,W]}$, $K_j=c/(t+j^2)$, $x_0=0$, and $x_{n\ge1}=L$. The physical halfwidth is $W/2$, boson energy $\sqrt t$, and moment $\rho=c$. Keep them fixed at other temperatures, prescribing the physical real center $(L/2)1_{\{|\omega|\ge1\}}$, not a temperature-rescaled model. The positive imaginary branch exists uniquely: the normal update in $y_n=\log(s_n/w_n)$ maps $0\le y_n\le\log(1+D/w_n)$ into itself and is a contraction with constant $D/(1+D)<1$, where $D=c(1/t+4)$ bounds every full normal row. This uses $|s\partial_s b|\le b$ and $\sum_{j\ge1}j^{-2}\le2$.
+The Poisson bounds give $b_{n\ge1}\le W/(\pi R)\le\epsilon$ and $b_0\ge1-\epsilon$. For the single head trial the matched form satisfies
+\[
+ \frac{Q}{b_0}\le1+\frac{c\epsilon-2c(1-\epsilon)}{1+t}<0,
+ \qquad 2c-3c\epsilon-(1+t)=3\varepsilon_0/4.
+\]
+Thus $\tau_{\rm lin}/\sqrt\rho\ge1/(2\pi\sqrt c)\to1/(\pi\sqrt2)$, matching the universal upper bound. Every DOS and shift is finite for each member; a single DOS is not held fixed across the family.
+For a strict witness above $U$, choose instead $c=13/25$, $t=1/100$, $\epsilon=1/1000$, $W=54000$, $R=27000000$, and $L=27054000$. Then $(1+c/t+c\epsilon)/W<\epsilon$, the head margin is $711/25000>0$, and $c(6466219/3576050)<1$. It has no causal continuation: $s_0\le1+D$, $s_1\le3+D$, whereas
+\[
+ L^2>\frac43(1+D)(3+D)
+\]
+violates the necessary first-pair Schwarz--Pick bound. The scalar case-(e) ceiling also excludes it from the scalar relative-real class. It is not a physical counterexample to Theorem~\ref{thm:causal-shift} or to the scalar sharp theorem.
+
+
+\begin{theorem}[Flat DOS and broad centered bands]\label{thm:flat}
+Consider finitely many channels, a reciprocal nonnegative spectral measure, a finite positive moment norm $\rho$, and finite zero-transfer entries. Use the same retarded part in the pairing and normal equations. If each DOS is constant in energy, $k_B\Tlin<\Cinf\sqrt{\rho}$. Neither the spectra nor the normal widths need be proportional across channels. The same strict bound holds for centered boxes of sufficiently large widths at fixed physical glue; the required widths can depend on the full spectrum. All DOS heights used to define $\rho$ are fixed.
+\end{theorem}
+\begin{proof}
+For a unit moment at $t=E^2/(2\pi\tau)^2>0$, put
+\[
+ d_n=\frac{k_0+2\sum_{j=1}^n k_j}{w_n},\qquad
+ (A_t)_{nm}=\frac{k_{|n-m|}+k_{n+m+1}}{\sqrt{w_nw_m}}-d_n\delta_{nm},
+ \qquad k_j=(j^2+t)^{-1}.
+\]
+Here $d_n$ uses the full folded normal row. Write $\kappa=(2\pi\Cinf)^2$. By the scalar flat transfer comparison~\cite{kondratev,rens,finite}, the spectral top of $A_t$ is strictly below $\kappa$: compare $k_j$ to $j^{-2}$ at nonzero transfer, with strictness at $j=1$. The lower spectrum matters because a reciprocal moment matrix may have negative eigenvalues. We use $A_t\succeq-(13/10)I$ and $13/10<\kappa$.
+
+For the lower bound, the full-line Toeplitz symbol of $k_j$ is $\pi\cosh(\sqrt t(\pi-|\theta|))/(\sqrt t\sinh(\pi\sqrt t))$ on $[-\pi,\pi]$. Its minimum is at $\pi$ and is at least $k_0-2(k_1-k_2+k_3)$. Compress to the even reflected subspace, divide the two indices by $\sqrt{w_n},\sqrt{w_m}$, and subtract the normal row. The resulting form bound is
+\[
+ A_t\succeq-\operatorname{diag}_{n\ge0}
+ \left(\frac{2(k_1-k_2+k_3)+2\sum_{j=1}^n k_j}{w_n}\right).
+\]
+The tail $n\ge2$ has bound $38/45$. For $t\ge1/3$ the first two entries are less than $13/10$, using $2(k_1-k_2+k_3)\le114/91$. For $t\le1/3$ the first two indices have a principal block bounded below by $-I$ (diagonals at least $3/4,-2/3$ and off-diagonal squared at most $25/48$). Its cross block against $n\ge2$ has squared Hilbert--Schmidt norm less than $1/8$, as follows by summing the $t=0$ squares to index four and integrating the $8/[3(m-1)^5]$ remainder. This is smaller than $(3/10)(13/10-38/45)$. The two-block Schur test proves the lower bound. The soft scalar trial $\sqrt{w_n}(1,1/5,1/16)_n$ on indices $0,1,2$ gives a positive quadratic form for $A_0-(13/10)I$, after cancellation of the static diagonal. Thus $\|A_t\|<\kappa$ for every $t>0$.
+
+For constant DOS use the exact Poisson factors $b_n(x)=1$. At each spectral edge the signed stability cost, besides the bare norm, is
+\[
+ -\operatorname{Re}\langle g_x,A_tg_y\rangle
+ +\frac12\sum_n d_n|g_{x,n}-g_{y,n}|^2 .
+\]
+This is the ordered expression to integrate with $\dd\mathfrak m_{xy}/(2\pi\tau)^2$ and the two angular measures, without another factor of $1/2$. The angular square comes from the matched normal rows. Bound the mixed term by $\|A_t\|\|g_x\|\|g_y\|$. On the finitely many positive moment edges the integrated coefficients are bounded by a common $\alpha<\kappa$ times the moment entries. The angular norm inequality gives a gap at and above the nominal ceiling and, by norm continuity at fixed spectrum, on an interval just below it. Constant factors less than one relative to the stated DOS envelope can be absorbed into $\dd\eta$, which only lowers the envelope moment norm.
+
+On a positive compact temperature interval, the exact normal rows bound each $s_n(x)$ uniformly between $w_n$ and $w_n+R$ at fixed glue, independently of the box widths. Hence the Poisson factors for centered boxes tend to one uniformly at each fixed frequency as the smallest box width tends to infinity. The normalized pairing operators converge in norm by the summable-transfer Hilbert--Schmidt bound, using $\sum_n(w_nw_{n+j})^{-1}\le\sum_n w_n^{-2}$. The normal diagonals converge uniformly on finite blocks and have uniform tail bound $R/w_n$. Apply the resulting norm convergence on a compact temperature interval from just below the nominal ceiling through the ceiling in Theorem~\ref{thm:norm}. The strictly positive flat gap persists for all sufficiently broad boxes. Theorem~\ref{thm:norm} handles higher temperatures.
+\end{proof}
+
+\begin{theorem}[Common soft scaling with arbitrary centered DOS]\label{thm:soft-phys}
+Fix a temperature $\tau>0$ and finitely many channels. Let $\dd\mu_{xy}(t)$ be fixed reciprocal nonnegative measures of finite moment $J_{xy}=\int\dd\mu_{xy}$ and finite inverse moment $L_{xy}=\int t^{-1}\dd\mu_{xy}$ on $t>0$. Here $J$ includes the factor $(2\pi\tau)^{-2}$. Soften the energies to $(2\pi\tau)\sqrt{\epsilon t}$ at fixed moment, with the same retarded measure in the pairing and normal equations. Let $Q_\epsilon$ be the normalized even stability form in $g=\sqrt{w b}\,v$ on the actual normal branch. Uniformly over all integrable, height-normalized even DOS families $0\le r_x^\epsilon\le1$, with no real normal shifts,
+\[
+ \liminf_{\epsilon\downarrow0}\inf_{\|g\|=1}Q_\epsilon(g)
+ \ \ge\ 1-\kappa\|J\| .
+\]
+At each fixed temperature strictly above $\Cinf\sqrt{\rho}$ the form is eventually strictly positive, uniformly over these families. At fixed physical spectral profile and moment norm the asymptotic onset satisfies $\limsup_{\epsilon\downarrow0}\sup_{\{r_x^\epsilon\}} k_B\Tlin^\epsilon\le\Cinf\sqrt{\rho}$. The coefficient cannot be lowered. This is not a finite-energy comparison.
+\end{theorem}
+\begin{proof}
+At fixed $n$, with $z_n^\epsilon=\epsilon s_n$, the centered normal equation gives $z_n^\epsilon=Lb_n+O_n(\epsilon)$ and $z_n^\epsilon\ge (L-\epsilon K_{2n+1}^\epsilon)b_n$ entrywise. The nonzero transfers are dominated by $J/j^2$ and tend to it. The Poisson weights $b_n$ are evaluated at $z_n^\epsilon$ for the scaled DOS $r_x^\epsilon(u/\epsilon)$, where $r^\epsilon$ is the original height-normalized DOS in units of $\pi\tau$. Extract weak-* limits of the scaled DOS and coordinate limits $\beta_n$ of the weights. Let $f_x$ be the Poisson function of the limiting DOS for channel $x$. Wherever $(L\beta_n)_x$ is positive, $\beta_{n,x}=f_x((L\beta_n)_x)$ by continuity of the Poisson kernels in $L^1$.
+
+Consider the graph of positive moment entries between channels with nonzero limiting DOS. This is also the graph of positive inverse-moment entries, including any loops. At a given frequency positivity propagates on a component with an edge. A channel with zero limiting DOS next to this graph cannot have positive weight: it would make its neighbor's width and weight positive, giving itself positive width but zero Poisson weight. Hence any component with an edge that is positive at one frequency solves $z=L_D f(z)$ there, restricting $L$ to that component $D$. The positive solution is unique: $|s f'_x(s)|<f_x(s)$, so a maximal multiplicative discrepancy between two positive solutions contracts strictly after applying $L_D f$. The component cannot vanish at another fixed frequency. If it did, strict decrease of $f_x(s)/s$ and convergence of the scaled Poisson functions at half the positive width $z_x$ would imply $b_{n,x}/z_{n,x}^\epsilon\ge(1+\delta)f_x(z_x)/z_x$ on $D$ for some $\delta>0$. The lower bound from the exact normal equation then contradicts the minimum positive ratio of $z_{n,x}^\epsilon/z_x$ on $D$. Thus each positive component has a profile $\beta_x$ independent of frequency.
+
+In the $g$ coordinates the form is the bare norm plus the ordered difference squares with weights $P_{nm}b_n(x)b_m(y)/2$, minus twice the normalized Hankel quadratic form. For a unit near-minimizing sequence use weak convergence of $g$ and Hilbert--Schmidt convergence of the Hankel operator. On a positive component the same-frequency angular difference costs diverge like $L/\epsilon$; bounded cost forces $v_{n,x}$ in the limit to be constant across that component at each $n$. Fatou's lemma retains the nonnegative off-frequency costs. The resulting form there is the scalar soft form with effective moment
+\[
+ j_D=\frac{\sum_{x,y\in D}\eta_x\eta_y\beta_x J_{xy}\beta_y}
+ {\sum_{x\in D}\eta_x\beta_x}\le\|J\| .
+\]
+The residual consists of channels outside the positive components. An edge from a positive component to a residual channel has zero weight on the residual endpoint at every fixed frequency: a thick neighbor would belong to the same component, while a neighbor with zero limiting DOS has positive width and zero Poisson weight. Thus there is no mixed limiting Hankel gain. Every edge internal to the residual has zero simultaneous weight at each fixed frequency, or it would be inside a positive component. In particular the residual frequency-zero block vanishes. Retain only the head-to-tail off-diagonal gains and the tail Hankel gain, using nonnegativity of the omitted squares. The head-to-tail scalar column has norm less than $4/5$ and the twice-folded tail Hankel norm is less than $1/6$, by the bounds used in Theorem~\ref{thm:norm}. Applying $\|J\|$ to the angular norms at each frequency bounds the residual gain by $(29/30)\|J\|$ times its squared norm. The part of the norm lost under weak convergence has no negative compact Hankel contribution. These facts give the asserted lower bound. For sharpness use the scalar broad-box soft sequence, with fixed center, or the exact limiting effective moment for boxes of widths proportional to $\epsilon^{-1}$ in the supplement.
+
+To pass from a fixed temperature to onset, suppose there are negative forms at $\tau_i\ge\Cinf\sqrt{\rho}+\delta$ for some $\delta>0$ and $\epsilon_i\to0$. Theorem~\ref{thm:norm} bounds $\tau_i$ from above, so take $\tau_i\to\tau_*>0$. Writing the physical energies as $\sqrt{\epsilon_i}E_0$, the scaled zero transfer $\epsilon_i K_0$ is exactly $\int E_0^{-2}\dd\mathfrak m$, independent of $\tau_i$. The other transfers converge to $J_*/j^2$ with $J_*=\int\dd\mathfrak m/(2\pi\tau_*)^2$ and are dominated by the same summable envelope using the positive lower bound on $\tau_i$. The preceding argument applies to this sequence, including its changing dimensionless DOS, and contradicts instability by giving $1-\kappa\rho/(2\pi\tau_*)^2>0$ as a lower limit.
+\end{proof}
+
+The common soft limit fixes the angular and inverse-moment profiles before softening. The result neither treats frequency-dependent real normal shifts nor rules out a finite-energy excess. Taking arbitrary independent Matsubara weights as in the optimality assertion of Theorem~\ref{thm:norm} would remove the normal equation needed in this proof.
+
+\section{Coulomb sum rule and the forward projection}
+For $W=v+v^2\chi^R$ with the reducible density response, the Lehmann weights give
+\[
+ J(q)=\frac{v(q)^2}{V}\langle[\rho_{-q},[H,\rho_q]]\rangle.
+\]
+The densities include all spins; loss at $q$ and $-q$ is assumed equivalent or averaged. To see the factor, expand the commutator in an energy eigenbasis: its two ordered halves contribute the same positive-energy Lehmann energy weight. In jellium the potential commutes with the density. The two shifts of the kinetic energy produce $\hbar^2 q^2/m$ per particle. With the SI convention $v(q)=e^2/(\epsilon_0 q^2)$ this gives $J(q)=J_C/q^2$, $J_C=n_e\hbar^2(e^2/\epsilon_0)^2/m$. The spherical Fermi-surface row measure $q\dd q/(2k_F^2)$ thus gives the exact projected row $J_C\log(2k_F/\delta)/(2k_F^2)$ at forward cutoff $\delta$. Its norm is the same by rotational invariance and nonnegative entries. Removing the single point $q=0$ does not change the divergence. In a one-band lattice the kinetic factor is instead the occupation-weighted discrete second difference of the dispersion; bounded hopping dispersion and bounded Fourier $v$ give a finite row on a compact Brillouin zone. Bare long-range Coulomb is not covered by this finiteness assertion.
+
+For a bounded full momentum ball of radius $R_k$, with measure $\dd^3 k/(2\pi)^3$, the moment has row bound $J_C R_k/\pi^2$, since $1/q^2$ is locally integrable in three dimensions. Define $b_n(k)=(\pi\tau)u_n/(u_n^2+e_n^2)\le1/w_n$, where $e_n$ is the real shifted dispersion. The interaction prefactor is $(\pi^2\tau)^{-1}$ because the summed normal propagator is $\tau u/(u^2+e^2)$. Dropping the positive normal difference square then shows that $\tau^3>\rho_{\rm bulk}\|\mathcal H\|/(2\pi^4)$ suffices for stability, where $\rho_{\rm bulk}$ is the full momentum moment norm and $\mathcal H_{nm}=[\sqrt{w_nw_m}(n+m+1)^2]^{-1}$. This follows from the bound $H_{nm}\le J/[(2\pi\tau)^2(n+m+1)^2]$ and the factor $2$ multiplying the reflected gain. The branch must be positive and reflected, with the stated folded order, well-defined forms and PSD instantaneous subtraction. This estimate uses different phase space and scaling. It does not prove normal-branch existence, regularity at zero transfer, or a transition bound for a microscopic material. An unrestricted momentum domain needs additional ultraviolet control.
+
+\begin{proposition}[No cutoff-uniform ceiling at fixed projected bandwidth]
+Consider the on-shell single-plasmon model $W(q,i\nu)=v(q)\nu^2/(E_p^2+\nu^2)$ in the spherical constant harmonic. Fix the plasmon energy $E_p>0$ and a height-normalized centered box of halfwidth $W>0$. The projected retarded coupling is $Cg_j$, $g_j=t/(t+j^2)$, $t=E_p^2/(2\pi\tau)^2$, and the instantaneous repulsion is $C$, proportional to $\log(2k_F/\delta)$. At each fixed $\tau\ge \sqrt{12}\,E_p/(2\pi)$ the normal branch is unstable for every sufficiently large $C$. Thus $k_B\Tlin(C)\to\infty$ at fixed $W$ and $E_p$. This concerns a projected family, not a cutoff-free operator or full-momentum jellium.
+\end{proposition}
+\begin{proof}
+Let $d=W/(\pi\tau)$, $a=2W/(\pi^2\tau)$, $p_*=1-g_1$, and $L=\sum_{j\ge1}g_j\le2t$. The odd normal row $p_{nm}=g_{|n-m|}-g_{n+m+1}$ has sum $1+2\sum_{j=1}^n g_j$. The centered branch is unique: $s_n=w_n+C\sum_m p_{nm}b_m$ with $b_n=(2/\pi)\arctan(d/s_n)$. Since $|\dd\log b/\dd\log s|\le1$, the normal map is a contraction in the uniform log-width metric on $w_n\le s_n\le w_n+C(1+2L)$. Its Lipschitz factor is at most $C(1+2L)/[1+C(1+2L)]$. The real equation vanishes by symmetry.
+
+Write $B=\sup_m b_m$. From $s_n\ge Cp_* b_n$ and $s_n b_n\le a$, one has $B^2\le a/(Cp_*)$ and $s_n\le w_n+C(1+2L)B$. The lower bound $\arctan z\ge z/(1+z^2)$ gives $s_n^2+d^2\ge Cap_*$. We use the sufficient coupling
+\[
+ C>\frac{1}{ap_*}\max\left\{100d^2,\ (44\cdot255)^2,\ \frac{576}{g_1^2}\right\}.
+\]
+The first term ensures $s_n b_n\ge(99/100)a$. On the trial support specified below, $w_n\le255$; the second term ensures
+\[
+ \frac{B}{b_n}\le\frac{100}{99}\left(\frac{1+2L}{p_*}+\frac{255}{\sqrt{Cap_*}}\right)
+ \le\frac{100}{99}\left(\frac{16}{11}+\frac1{44}\right)<\frac32 .
+\]
+Here only the denominator index is restricted to the trial support; the numerator is the supremum over all positive frequencies.
+
+In the coordinate $y_n=b_n v_n$ the instantaneous cost is $2C|\sum_n y_n|^2$. The retarded gain per $C$ has off-diagonal transfer $g_{|n-m|}+g_{n+m+1}$, and diagonal term after normal subtraction $2g_{2n+1}-\sum_{m\ne n}p_{nm}b_m/b_n$. Use $y_0=1$, $y_m=-1/N$ for $N\le m<2N$, and zero elsewhere, with $N=64$. The static term vanishes. The diagonal gain at zero is at least $g_1/2$ since its off-diagonal normal row sums to $g_1$. The tail diagonal costs at most $3L/N$, and both orders of the head-to-tail transfer cost at most $4L/N$. Tail off-diagonal gain is nonnegative. Thus the gain per $C$ exceeds $g_1/4$, using $L/g_1\le13/6$. Meanwhile $\sum_n w_n|y_n|^2=4$ and
+\[
+ \frac{1}{b_n}\le\frac{100}{99}\left(\frac{p_*}{44}+1+2L\right)\sqrt{\frac{C}{ap_*}}
+\]
+on the support, so the bare cost is less than $6\sqrt{C/(ap_*)}$. The third threshold term makes this smaller than $C g_1/4$. The finite-support form is therefore negative, without a frequency cutoff in the equation. Taking arbitrarily high fixed test temperatures gives the divergence of onset; the sufficient coupling can depend on the chosen temperature and width.
+\end{proof}
+
+\paragraph{Allowing the box to vary.}
+An instability can be obtained at any fixed $\tau>0$ by varying both the cutoff and the width. First take a flat DOS. The diagonal gain per $C$ is then $g_{2n+1}-2\sum_{j=1}^n g_j$, so the same trial with $N>6L/g_1$ has positive gain independent of $C$. Choose $C$ large enough to exceed its finite bare cost. At this fixed coupling the finite centered box weights approach one as $W\to\infty$ and the normal sums converge by domination. In the $y$ variables the trial remains in the static null space. The strict instability therefore persists at some finite $W$. This does not show fixed-box instability at lower test temperatures.
+
+\section{Why fixed-branch comparison cannot compare all onsets}
+\begin{proposition}[More normal scattering can raise finite-band onset]
+There are two effective centered finite-band reciprocal models with identical pairing kernels such that the normal spectrum of the second dominates the first as a measure, and the second has strictly higher linear onset.
+\end{proposition}
+\begin{proof}
+Use channel measures $1,10^{12}$ and centered box DOS of halfwidths $100,10^7$. The pair transfers are $K_{AA,j}=4/[1+(\tau j)^2]$, $K_{AB,j}=K_{BA,j}=10^{-9}/[1+10^4(\tau j)^2]$, and $K_{BB,j}=0$. The centered normal branch exists for both choices: the Poisson average $b_i=(2/\pi)\arctan(W_i/(\pi\tau s_i))$ is log-Lipschitz with constant one, and the log-width normal map on $[w_n,w_n+D_*]$ is a contraction with factor at most $D_* /(1+D_*)<1$ for finite row cap $D_*$. The real equation vanishes by symmetry.
+
+With the matched normal spectrum, the even $AA$ transfer row is at most $20$ for $\tau\ge1$. Up to $\tau=1000$, modes with $w_n<40$ have $s_{B,n}<41$ by its small cross row, so $b_{B,n}>1/2$. The equal-index cross term forces $s_{A,n}>250-1$ there; above those modes $s_A\ge w_n\ge40$. The $AA$ gap block therefore has norm at most $1/2$. For $\tau\ge1000$ use $b_{A,n}/s_{A,n}\le200/(\pi^2\tau)$, which gives an even smaller norm bound. The symmetric off-diagonal gap block has norm at most $\sqrt{10^3\,10^{-9}}(1+4/10^4)<1/100$. Thus $k_B\Tlin\le1$.
+
+Now add only a normal $BB$ line with weighted transfer $10^{16}/[1+(\tau j)^2]$. At $\tau=101/100$ the same-index normal term gives $s_{B,0}\ge (10^{16}/2)b_{B,0}$. The box bound implies $b_{B,0}^2\le4\cdot10^7/(9\cdot10^{16})<10^{-8}$. In $A$ the equal-index contribution from $B$ is below $1/10$, and the sum from other $B$ indices is below $1000/(1+10^4\tau^2)<1/10$ by telescoping and $b_{B,n}\le1$. Consequently $s_{A,0}<26/5$ and $b_{A,0}>89/100$. The even one-mode $A$ trial has pairing quotient greater than $(59/10)(89/100)/(26/5)>1$. Hence $k_B\Tlin\ge101/100$. Broadening $B$ lowers its contribution to the normal self-energy of $A$ without changing the pairing moment norm. This uses independently specified normal and pairing kernels, not the addition of a matched phonon to a microscopic model. The instability demonstrated here is below the putative sharp pairing-moment scale, which is at least $4\pi\Cinf$ in this example. The witness disproves monotonicity; it neither proves nor refutes an upper bound at that scale.
+\end{proof}
+
+A signed projected moment need not be a positive budget even under normal spectral dominance. On two equivalent flat patches at $\tau=1$, let $8/(1+j^2)$ be the diagonal line and $8/(64+j^2)$ the off-diagonal line. The antisymmetric channel sees their difference, with zero signed moment; the normal row sees their sum. The first even pairing quotient is $6111/4745>1$. An envelope by total variation avoids the cancellation. This distinction matters even when all the signed projected Matsubara values are positive.
+
+\section{Relation to prior bounds and scope}
+Moussa and Cohen identified the largest moment eigenvalue rather than the angular average as the flat multiband strong-coupling scale~\cite{moussa}. Kiessling, Altshuler and Yuzbashyan formulated the flat scalar spectral problem and Conjecture 2~\cite{kay}; Kondratev's repository manuscript and Rens's flat scalar preprint address the sharp comparison~\cite{kondratev,rens}. Siraj's MELean archive is overlapping work on the basis of its official record~\cite{siraj}. GSI Theorems 7--9 treat the matched flat angular problem, with fixed-matrix brackets in Theorem 8, and Theorem 10 treats PSD pairing subtraction on a fixed branch~\cite{gsi}. Dynamical repulsion and sign-changing pairing, and plasmon-assisted superconducting density functional theory in lithium, have been studied separately~\cite{pimenov,akashi}. Theorem~\ref{thm:causal-shift} gives the non-sharp upper coefficient $U$ for actual causal shifted finite-channel branches at arbitrary glue energies. The optimal coefficient in that class remains open, as does whether shifts raise it above the centered optimum. For coupled relative-real branches without an established causal continuation, the best coefficient remains open in $[\Cinf,1/(\pi\sqrt2)]$; solving the relative real equation is not silently equated with the additional analytic self-map hypothesis. Our normal-scattering example shows a specific reversal with a fixed pairing kernel in an effective model; it does not establish priority for scattering-induced onset enhancement. Schwarz--Pick and Harnack are classical; no priority claim is made for the conditional extension.
+
+\paragraph{Replay and verification.}
+The accompanying proof files\ifstaged{\UNIVGLUESUPPDOI}{ (\UNIVGLUESUPPDOI)}{}\ifstaged{\UNIVGLUEREPO}{ and repository (\UNIVGLUEREPO)}{} contain the proof details and finite Lean lemmas in the main directory and the \texttt{SHARP-Q2}, \texttt{PLASMON-W}, \texttt{PHYS-Q2}, \texttt{CENTERED-GAP} and \texttt{GENERAL} directories. Exact rational replays check finite signs and coefficients and reject their mutated versions, including the complementary-DOS Harnack step and the noncausal external-shift witness. They do not replace the analytic arguments or the separate scalar theorem and certificates~\cite{finite}.
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

@@ -1,0 +1,84 @@
+PASS all five inherited evidence byte pins
+CERTIFIED 48 determinant identities, Harnack budgets and finite-DOS external family
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\replay.py EXIT 0
+CERTIFIED 36 rational causal pairs and 216 exact Poisson comparisons
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\independent.py EXIT 0
+PASS: exact tail, completion, angular allocation, and relaxed sharpness
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\SHARP-Q2\replay.py EXIT 0
+CERTIFIED finite signs, single crossings, convolution and uniform reserve
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\replay.py EXIT 0
+CERTIFIED 1008 exact finite centered edge matrices
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\independent.py EXIT 0
+REJECT: Poisson quadratic determinant identity
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\replay.py --mutant harnack-sign EXIT 1
+REJECT: first two Matsubara Schwarz-Pick coefficient
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\replay.py --mutant pick-factor EXIT 1
+REJECT: complementary Harnack head reserve
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\replay.py --mutant complement EXIT 1
+REJECT: improved coefficient square
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\replay.py --mutant reserve-sign EXIT 1
+REJECT: external-shift head instability margin
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\replay.py --mutant external-fold EXIT 1
+REJECT: external-shift head instability margin
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\replay.py --mutant tail-cost EXIT 1
+REJECT: moment and temperature units
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\replay.py --mutant moment-units EXIT 1
+REJECT: witness cannot be admitted as a causal normal branch
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\replay.py --mutant causal-admission EXIT 1
+REJECT: positive Nevanlinna normal width
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\independent.py --mutant self-energy-sign EXIT 1
+REJECT: independent pointwise Poisson Harnack test
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\independent.py --mutant poisson-fold EXIT 1
+REJECT: independent pointwise Poisson Harnack test
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\independent.py --mutant endpoint-ratio EXIT 1
+REJECT: tail covers completion and reserve
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\SHARP-Q2\replay.py --mutant tail-reserve EXIT 1
+REJECT: exact head-tail determinant threshold
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\SHARP-Q2\replay.py --mutant head-tail-fold EXIT 1
+REJECT: retain both normal diagonals in completion
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\SHARP-Q2\replay.py --mutant tail-mass EXIT 1
+REJECT: imbalanced head PSD via angular lock
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\SHARP-Q2\replay.py --mutant head-lock EXIT 1
+REJECT: imbalance covers head-tail losses
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\SHARP-Q2\replay.py --mutant loss-budget EXIT 1
+REJECT: ordered endpoint budget
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\SHARP-Q2\replay.py --mutant endpoint-factor EXIT 1
+REJECT: ordered endpoint budget
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\SHARP-Q2\replay.py --mutant perron-ratio EXIT 1
+REJECT: independent-weight relaxation has a strict head instability
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\SHARP-Q2\replay.py --mutant soft-witness EXIT 1
+REJECT: positive reflected numerator
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\replay.py --mutant folded-numerator EXIT 1
+REJECT: upper-cone kernel crossing
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\replay.py --mutant upper-cone-sign EXIT 1
+REJECT: lower-cone kernel crossing
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\replay.py --mutant lower-cone-product EXIT 1
+REJECT: shifted convolution decomposition
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\replay.py --mutant convolution-shift EXIT 1
+REJECT: exact head determinant
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\replay.py --mutant head-determinant EXIT 1
+REJECT: far, intermediate and retained tail reserves
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\replay.py --mutant middle-imbalance EXIT 1
+REJECT: average using the complementary DOS
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\replay.py --mutant drop-complement EXIT 1
+REJECT: two endpoint costs and onset units
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\replay.py --mutant edge-copy EXIT 1
+REJECT: unrounded onset coefficient squared
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\replay.py --mutant exact-reserve EXIT 1
+REJECT: exact centered edge PSD at t=1/1000, r=2/3, left=(Fraction(1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)), right=(Fraction(1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\independent.py --mutant erase-first-tail EXIT 1
+REJECT: exact centered edge PSD at t=1/1000, r=1/100, left=(Fraction(1, 1), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)), right=(Fraction(1, 1), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1))
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\independent.py --mutant double-mixed-pair EXIT 1
+REJECT: exact centered edge PSD at t=1/1000, r=2/3, left=(Fraction(1, 1), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)), right=(Fraction(1, 1), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1))
+COMMAND C:\Users\davis\AppData\Local\Programs\Python\Python312\python.exe -I -B D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\independent.py --mutant overfold-normal EXIT 1
+Lean (version 4.35.0, x86_64-w64-windows-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)
+COMMAND C:/Users/davis/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean.exe --version EXIT 0
+
+COMMAND C:/Users/davis/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean.exe --threads=1 --memory=500 D:\dev\scratch\ceiling-20261118\UNIV-GLUE\GENERAL\Finite.lean EXIT 0
+
+COMMAND C:/Users/davis/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean.exe --threads=1 --memory=500 D:\dev\scratch\ceiling-20261118\UNIV-GLUE\SHARP-Q2\Finite.lean EXIT 0
+
+COMMAND C:/Users/davis/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean.exe --threads=1 --memory=500 D:\dev\scratch\ceiling-20261118\UNIV-GLUE\CENTERED-GAP\Finite.lean EXIT 0
+CERTIFIED five Python bases, 31 named mutant rejections, three Lean files
+
+GENERAL verifier EXIT 0

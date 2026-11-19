@@ -1,0 +1,48 @@
+name: replay-and-paper
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verification:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: leanprover/lean-action@v1
+        with:
+          use-github-cache: false
+          build: false
+      - name: Install Tectonic and poppler
+        run: |
+          set -euo pipefail
+          curl -fsSL https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.17.0/tectonic-0.17.0-x86_64-unknown-linux-gnu.tar.gz | sudo tar -xz -C /usr/local/bin
+          tectonic --version
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends poppler-utils
+      - name: Pinned source manifest
+        run: sha256sum -c MANIFEST.sha256
+      - name: Complete README replay, seventy mutants, six Lean files and manuscript
+        run: |
+          set -euo pipefail
+          awk '/^```sh$/{inside=1; next} /^```$/{if(inside) exit} inside {print}' README.md > /tmp/universal-glue-readme.sh
+          test -s /tmp/universal-glue-readme.sh
+          sh /tmp/universal-glue-readme.sh
+          rm /tmp/universal-glue-readme.sh
+          if grep -nE 'Overfull \\[hv]box|Citation .*undefined|Reference .*undefined|There were undefined references|Label\(s\) may have changed' main.log; then exit 1; fi
+          if grep -nE '—|---' main.tex refs.bib; then exit 1; fi
+          if grep -n '—' README.md CITATION.cff; then exit 1; fi
+          pdfinfo -url main.pdf > /tmp/universal-glue-links.txt
+          grep -qF 'https://doi.org/10.5281/zenodo.24372930' /tmp/universal-glue-links.txt
+          grep -qF 'https://doi.org/10.5281/zenodo.24372929' /tmp/universal-glue-links.txt
+          grep -qF 'https://github.com/SuperMatics-Inc/universal-glue-pairing-ceiling' /tmp/universal-glue-links.txt
+          test -s main.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: universal-glue-paper
+          path: |
+            main.pdf
+            main.log
+          if-no-files-found: error
